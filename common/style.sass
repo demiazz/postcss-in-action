@@ -1,0 +1,94 @@
+@import "shower-bright"
+@import "evil-front"
+@import "chartist"
+
+$color: #ab4500
+
+a
+  color: $color
+
+.slide
+  mark, code, pre
+    font-family: "Fira Mono"
+  mark
+    color: $color
+    background: transparent
+  mark.important
+    padding: 3px 7px 0
+    background: $color
+    color: white
+    mark
+      color: white
+  pre mark
+    padding: 0
+  pre mark.important
+    background: $color
+  pre mark.comment
+    color: #997a85
+  table th, table td
+    background: linear-gradient(to top, $color, $color 0.055em, transparent 0.055em, transparent) repeat-x
+
+.caption
+  color: black
+
+.caption a, .slide a
+  background: none
+  border-bottom: 0.09em solid rgba($color, 0.4)
+  &:hover
+    border-bottom-color: $color
+
+.caption a
+  display: inline-block
+  line-height: 1.2
+
+.slide::after
+  text-align: right
+  right: 50px
+
+.list .slide:after
+  padding-top: 35px
+  right: 0
+  text-align: center
+
+.slide > div
+  padding-top: 80px
+  height: 560px
+
+.slide pre code:before
+  display: none
+
+.slide h2
+  a
+    border-bottom-width: 0.05em
+  em
+    display: block
+    position: absolute
+    margin-top: -45px
+    font-size: 35px
+    font-style: normal
+    font-weight: normal
+    padding-bottom: 6px
+    color: $color
+
+.cover h2
+  font-family: "Open Sans"
+  font-weight: bold
+  color: white
+  +stroke-text(black)
+  font-size: 60px
+  em
+    color: white
+
+.progress.for-cover
+  display: none
+
+@media screen
+  .list .slide:target:before
+    box-shadow: 0 0 10px 0 $color, 0 0 0 12px $color
+
+  .list .slide:target:after
+    color: $color
+
+  .full .progress div
+    background: $color
+    height: 5px

@@ -1,0 +1,17 @@
+source 'https://rubygems.org'
+source 'https://rails-assets.org'
+
+gem 'rake'
+gem 'sinatra'
+gem 'redcarpet'
+gem 'compass-core'
+gem 'therubyracer'
+gem 'activesupport'
+gem 'jquery-cdn',        '>= 2.1.3'
+gem 'evil-front-all',    '>= 0.3.1'
+gem 'term-ansicolor'
+gem 'autoprefixer-rails'
+
+gem 'rails-assets-shower-core'
+gem 'rails-assets-shower-bright'
+gem 'rails-assets-chartist'

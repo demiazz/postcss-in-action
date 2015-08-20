@@ -1,0 +1,491 @@
+@import "evil-front"
+
+$color: #ab4500
+
+.slide.shout
+  background: $color
+  color: white
+
+  h2
+    background: $color
+    color: white
+    font-family: 'Open Sans', sans-serif
+    font-size: 70px
+    line-height: 1.4
+    top: auto
+    left: 0
+    right: 0
+    bottom: -15px
+    padding: 0 30px 10px
+    box-sizing: border-box
+    text-shadow: none
+
+  &.is-questions h2
+    top: 115px
+    bottom: auto
+
+.slide.is-title
+  &::after
+    visibility: hidden
+    .list &
+      visibility: visible
+  h2
+    font-size: 32px
+    strong
+      display: block
+      font-weight: normal
+      font-size: 250%
+      line-height: 1.35
+      position: relative
+      left: -7px
+  img
+    position: absolute
+    bottom: 100px
+    right: 100px
+    width: 300px
+  em
+    font-family: "Open Sans Light"
+    font-style: normal
+    position: absolute
+    bottom: 90px
+
+//
+// Charts
+//
+
+.chart
+  display: inline-block
+  height: 400px
+  width: 95%
+
+  &.chart_performance .ct-bar
+    stroke-width: 50px
+
+.chart-tooltip
+  position: absolute
+  min-width: 5em
+  padding: .5em
+  background: $color
+  color: white
+  font-size: 12px
+  font-weight: bold
+  text-align: center
+  pointer-events: none
+  z-index: 1
+
+//
+// Slides with images
+//
+
+.slide
+  &.with-evolution
+    img
+      max-width: 100%
+
+  &.with-html5,
+  &.with-modularity,
+  &.with-autoprefixer,
+  &.with-clean-css
+    > div > p
+      text-align: center
+
+  &.with-html5
+    img
+      margin-left: -30px
+      height: 400px
+
+  &.with-sass-compass
+    img
+      height: 400px
+
+  &.with-browsers
+    img
+      margin-top: 90px
+      width: 100%
+
+  &.with-devices
+    img
+      width: 100%
+
+  &.with-autoprefixer
+    img
+      height: 300px
+
+  &.with-preprocessor-scheme
+    img
+      margin-top: 100px
+      width: 90%
+
+  &.with-postcss
+    img
+      width: 95%
+
+  &.with-precss
+    img
+      margin-top: 90px
+      width: 95%
+
+  &.with-pre-post
+    img
+      margin-top: 100px
+      width: 90%
+
+  &.with-modularity
+    img
+      margin-left: 50px
+      height: 400px
+
+  &.with-postcss-scheme
+    img
+      width: 100%
+
+  &.with-clean-css
+    img
+      width: 80%
+
+  &.with-cssnano
+    img
+      margin-top: 60px
+      width: 95%
+
+// Shout
+
+.slide.shout.is-small
+  h2
+    font-size: 60px
+
+.slide.with-martians
+  h2
+    strong
+      font-weight: normal
+      padding-right: 5px
+  img
+    display: block
+    width: 320px
+    margin: 80px auto 0 auto
+
+.slide.is-bottom
+  h2
+    position: absolute
+    bottom: 10px
+
+.slide.is-black
+  h2
+    +stroke-text(white)
+    color: black
+    em
+      color: black
+
+.slide.with-2-sides
+  pre, p
+    float: left
+    clear: left
+    width: 350px
+    &:nth-of-type(2)
+      float: right
+      clear: right
+  .sides-note
+    width: 90%
+    &.is-center
+      text-align: center
+
+.slide.with-2-codes
+  pre
+    float: left
+    clear: left
+    width: 350px
+    &:nth-of-type(2)
+      float: right
+      clear: right
+
+.slide.with-bigger-right
+  pre, p
+    width: 260px
+    &:nth-of-type(2)
+      width: 440px
+
+.slide.with-smaller-right
+  pre:nth-of-type(2)
+    font-size: 60%
+
+.slide.with-huge-code
+  pre
+    column-count: 3
+    font-size: 22%
+    font-weight: bold
+    mark.important
+      padding: 0
+    code
+      line-height: 1.3
+
+.slide.with-medium-code
+  pre
+    font-size: 85%
+
+.slide.with-small-code
+  pre
+    font-size: 70%
+    code
+      line-height: 1.8
+
+.slide.with-smaller-code
+  pre
+    font-size: 55%
+    code
+      line-height: 1.8
+
+.slide.with-links
+  &::after
+    visibility: hidden
+  li
+    font-size: 140%
+    margin-top: 10px
+    &::before
+      visibility: hidden
+    &:nth-child(2),
+    &:nth-child(3)
+      font-size: 120%
+    &:nth-child(4)
+      margin-top: 50px
+    &:nth-child(4), &:nth-child(5)
+      font-size: 130%
+  img
+    position: absolute
+    bottom: 70px
+    right: 100px
+    width: 250px
+
+.slide.with-evolution
+  strong
+    color: $color
+
+.slide.with-difference
+  .arrow
+    position: absolute
+    top: 164px
+    left: 368px
+    font-size: 200%
+    color: $color
+  p, ul
+    position: absolute
+    width: 350px
+    &:nth-of-type(2)
+      left: 560px
+  p
+    top: 186px
+    font-size: 130%
+  ul
+    top: 282px
+
+.slide.with-companies
+  p
+    padding-top: 20px
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+  img
+    padding: 40px 20px
+    max-height: 80px
+    max-width: 220px
+
+
+.slide.with-clients
+  img
+    display: block
+    margin: 0 auto 70px auto
+    &:first-child
+      width: 200px
+      margin-top: 75px
+      margin-bottom: 55px
+    &:nth-child(2)
+      width: 300px
+    &:nth-child(3)
+      width: 300px
+
+.slide.with-projects
+  p
+    padding-top: 55px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+  img
+    height: 220px
+
+.slide.with-article, .slide.with-quote
+  img
+    display: block
+    width: 150px
+    margin: 70px auto 20px auto
+    border-radius: 50%
+  p
+    font-size: 120%
+    text-align: center
+    line-height: 1.7
+  cite
+    font-size: 70%
+    position: relative
+    top: 10px
+
+.slide.with-image
+  img
+    width: 800px
+
+.slide.with-2-images
+  img
+    float: left
+    width: 390px
+    position: relative
+    top: 70px
+    &:nth-child(2)
+      float: right
+
+.evolution
+  height: 300px
+  width: 650px
+  margin: 90px auto 0 auto
+  position: relative
+  font-size: 140%
+  &_top, &_right, &_left
+    position: absolute
+    width: 235px
+    text-align: center
+    line-height: 1.4
+  &_top
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+  &_right
+    top: 244px
+    right: 0
+  &_left
+    top: 244px
+    left: 0
+  &_first, &_second, &_third
+    font-size: 170%
+    position: absolute
+    color: $color
+  &_first
+    top: 30%
+    left: 65%
+    transform: rotate(60deg)
+  &_second
+    bottom: -34px
+    left: 55%
+    transform: translateX(-50%) rotate(180deg)
+  &_third
+    top: 30%
+    right: 65%
+    transform: rotate(-60deg)
+  [lang=en] &_second
+    left: 52%
+  &.is-postcss
+    width: 700px
+    .evolution_second
+      left: 51%
+    .evolution_top, .evolution_right, .evolution_left
+      width: 245px
+
+.compare
+  &.is-long
+    padding-top: 0
+  &_part
+    clear: left
+    padding-top: 15px
+  &_title
+    float: left
+    width: 100px
+    text-align: right
+  &_line
+    float: left
+    height: 30px
+    background: #b0b0b0
+    margin: 10px 0 0 20px
+  &_value
+    float: left
+    font-size: 55%
+    margin: 11px 0 0 15px
+
+.compare_part.is-postcss .compare_title
+  font-weight: bold
+.compare_part.is-postcss .compare_line
+  background: $color
+  width: 600px * (36 / 1084)
+.compare_part.is-libsass .compare_line
+  width: 600px * (136 / 1084)
+.compare_part.is-less .compare_line
+  width: 600px * (160 / 1084)
+.compare_part.is-stylus .compare_line
+  width: 600px * (167 / 1084)
+.compare_part.is-sass .compare_line
+  width: 600px * (1084 / 1084)
+
+.postprocessing
+  position: relative
+  margin: 0 auto
+  width: 210px
+  top: -55px
+  &_step
+    +height(50px)
+    border: 1px solid
+    text-align: center
+    position: relative
+    width: 100%
+    margin-top: 32px
+    margin-left: 3px
+    font-size: 115%
+    &:after
+      content: "↓"
+      font-size: 70%
+      color: black
+      position: absolute
+      top: -46px
+      left: 97px
+    &:first-child
+      margin-top: 0
+      &:after
+        display: none
+    &.is-css
+      padding: 0
+      height: auto
+      line-height: 1.1
+      border: none
+      &:after
+        top: -27px
+    &.is-important
+      padding: 0
+      color: $color
+      border-width: 4px
+      margin-left: 0
+      font-weight: bold
+      &:after
+        top: -48px
+  &_position
+    position: relative
+  &_note
+    position: absolute
+    top: 11px
+    left: 15px
+    font-size: 55%
+    white-space: nowrap
+
+.slide .github
+  border: none
+  color: gray
+  font-family: Open Sans, sans-serif
+  strong
+    padding: 0 10px
+    color: black
+
+.source
+  position: absolute
+  bottom: 48px
+  left: 128px
+  font-size: 60%
+
+.slide .copyright
+  position: absolute
+  bottom: 15px
+  right: 30px
+  font-size: 50%
+  color: black
+  border-bottom: none
